@@ -1,3 +1,16 @@
+# Setup and Run Instructions
+
+Step 1: Start the Database MySQL in Docker
+
+Step 2: Build the Spring Boot Application
+Compile and package the source code into an executable JAR file using Maven:
+mvn clean package -DskipTests
+
+Step 3: Run the Application
+java -jar target/job-service-0.0.1-SNAPSHOT.jar
+
+The application will start up and bind to port 8080 by default.
+
 # Question A - System Design
 
 To support 1 million jobs smoothly, we apply Event-Driven Architecture using a dedicated message broker (Apache Kafka or RabbitMQ) with a high-speed distributed cache (Redis)
